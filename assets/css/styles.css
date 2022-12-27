@@ -1,0 +1,12 @@
+:root {
+  --onyx-black: #393E41;
+  --timberwolf-grey: #D3D0CB;
+  --vivid-skyblue: #56CBF9;
+  --snow-white: #FFFBFE;
+  font-family: 'Inter', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
