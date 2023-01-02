@@ -46,6 +46,22 @@ body {
   transform: translateX(-100%);
 }
 
+.avatar-icon {
+  font-size: 3rem;
+}
+
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  padding: 0.25em 0.5em;
+  color: var(--snow-white);
+  border-bottom: 1px solid var(--snow-white);
+}
+
 .navigation-list {
   display: flex;
   flex-direction: column;
@@ -230,4 +246,12 @@ body {
   border-radius: 8px;
   font-size: 1.8rem;
   font-weight: bold;
+  cursor: pointer;
+  transform: scale(1.0);
+}
+
+.compose-btn:hover, .compose-btn:focus {
+  transform: scale(1.1);
+  transition: 0.5s;
+  background-color:  #24baf1; 
 }
