@@ -175,6 +175,10 @@ body {
   margin-right: 0.5em;
 }
 
+.nav-icon:nth-child(5) {
+  margin-right: 4em;
+}
+
 .search {
   position: relative; 
 }
@@ -208,21 +212,35 @@ body {
   row-gap: 1em;
 }
 
+
 .email {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas: 
-  "sb dt"
+  "sd dt"
+  "sb sb"
   "ld ld";
-  row-gap: 1em;
+  row-gap: 0em;
   background-color: var(--timberwolf-grey);
   border-radius: 20px;
-  padding: 1em; 
+  padding: 0.75em; 
+  cursor: pointer;
 } 
+
+.email:hover, .email:focus {
+  background-color: rgb(245, 236, 225);
+}
+
+.sender {
+  grid-area: sd;
+  font-weight: 700;
+}
 
 .subject {
   grid-area: sb;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .date {
@@ -232,7 +250,7 @@ body {
 
 .lead {
   grid-area: ld;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .compose-btn {
@@ -254,4 +272,102 @@ body {
   transform: scale(1.1);
   transition: 0.5s;
   background-color:  #24baf1; 
+}
+
+.individual-email {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background-color: var(--snow-white);
+}
+
+.email-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--snow-white);
+  background-color: var(--vivid-skyblue);
+  font-size: 2rem;
+  padding: 0.75em;
+}
+
+.option-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  column-gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.option-menu > li, .back-btn {
+  cursor: pointer;
+}
+
+.back-btn {
+  border: none;
+  background: none;
+  color: var(--snow-white);
+}
+
+.option-menu > li:hover, 
+.option-menu > li:focus,
+.back-btn:hover,
+.back-btn:focus {
+  color: var(--onyx-black);
+}
+
+.email-body {
+  display: grid;
+  grid-template-columns: 45% 35% 10%;
+  justify-content: space-between;
+  align-content: center;
+  grid-template-areas: 
+  "eh eh fb"
+  "si si si"
+  "ec ec ec";   
+  row-gap: 1.5em;
+  padding: 2em 1em;
+}
+
+.email-heading {
+  grid-area: eh;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.favorite-btn {
+  grid-area: fb;
+  font-size: 2rem;
+  width: fit-content;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+} 
+
+.sender-content { 
+  grid-area: si;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+ 
+.sender-info, .sender-options {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.sender-info {
+  column-gap: 0.5em;
+}
+
+.sender-icon {
+  font-size: 2.5rem;
+}
+ 
+.email-content {
+  grid-area: ec;
 }
