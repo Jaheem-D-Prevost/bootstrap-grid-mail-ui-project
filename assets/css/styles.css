@@ -11,7 +11,8 @@ body {
   font-size: 1.6rem;
   position: relative;
 }
- 
+
+/* Navigation Styles */ 
 .header {
   padding-top: 1em;
 }
@@ -171,14 +172,19 @@ body {
 }
 
 .nav-icon {
-  font-size: 1.3em;
+  font-size: 2.5rem;
   margin-right: 0.5em;
 }
 
-.nav-icon:nth-child(5) {
-  margin-right: 4em;
+.menu-item:nth-child(5) .nav-icon {
+  margin-right: 0.70em;
 }
 
+.menu-item:last-child .nav-icon {
+  margin-right: 0.60em;
+}
+
+/* Primary MailBox Styles */
 .search {
   position: relative; 
 }
@@ -274,6 +280,7 @@ body {
   background-color:  #24baf1; 
 }
 
+ /* Individual Email Styles */
 .individual-email {
   display: none;
   position: absolute;
@@ -321,8 +328,8 @@ body {
 .email-body {
   display: grid;
   grid-template-columns: 45% 35% 10%;
-  justify-content: space-between;
-  align-content: center;
+  justify-content: space-between; 
+  align-items: center;
   grid-template-areas: 
   "eh eh fb"
   "si si si"
@@ -343,7 +350,8 @@ body {
   width: fit-content;
   border: none;
   background: transparent;
-  cursor: pointer;
+  cursor: pointer; 
+  justify-self: end;
 } 
 
 .sender-content { 
@@ -370,4 +378,78 @@ body {
  
 .email-content {
   grid-area: ec;
+}
+
+@media screen and (min-width:649px) and (max-width:1000px) {
+
+  body {
+    font-size: 2rem;
+ 
+  }
+   /* Navigation Styles */
+  .nav-icon {
+    font-size: 3rem;
+    margin-right: 0.75em;
+  }  
+
+  .navigation-header { 
+    font-size: 4rem;  
+  }
+
+  .avatar-icon {
+    font-size: 4rem;
+  }
+
+  .navigation-list {   
+    font-size: 2.5rem; 
+  } 
+     
+  /* Primary MailBox Styles */
+  .mail-box {
+    font-size: 3rem;
+  }   
+
+  .email { 
+    row-gap: 0.10em; 
+  }  
+  
+  .sender {
+    font-size: 2.4rem;
+  }
+  
+  .subject { 
+    font-size: 2.0rem; 
+  }
+   
+  .lead { 
+    font-size: 1.9rem;
+  }
+  
+  .compose-btn { 
+    font-size: 2.2rem; 
+  }
+
+  /* Individual Email Styles */
+  .email-header { 
+    font-size: 3rem; 
+  }   
+  
+  .email-heading { 
+    font-size: 2.5rem; 
+  }
+  
+  .favorite-btn { 
+    font-size: 2.75rem; 
+  } 
+  
+  .sender-content {    
+    font-size: 2.5rem;
+  } 
+  .sender-icon {
+    font-size: 3rem;
+  }
+   
+  .email-content {
+    grid-area: ec;
+  }
 }

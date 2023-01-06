@@ -70,6 +70,12 @@ for (let i = 0; i < listItems.length; i++) {
 const emails = document.querySelectorAll('.email');
 emails.forEach(email => {
   const renderEmail = () => {
+
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+    
     const id = Array.from(email.classList)[1];
 
     const emailObj = emailData.find(obj => obj.id === id);
