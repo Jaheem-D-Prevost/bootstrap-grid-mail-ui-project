@@ -16,74 +16,81 @@
   </head>
   <body>
     <main class="container-fluid"> 
-
-      <header class="header">
-        <nav class="navigation-menu d-flex align-items-center">
-          <button class="nav-btn ">
-            <i class="hamburger-menu fa-solid fa-bars fa-2xl"></i>
-          </button>
-
-          <div class="overlay">
-
-          </div>
-          <div class="mobile-navigation">
-            <header class="navigation-header"> 
-              <i class="fa-regular fa-circle-user avatar-icon"></i>
-
-              <p class="logo-text">LOGO</p>
-            </header>
-            <ul class="navigation-list" aria-hidden="true">
-              <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-inbox nav-icon"></i>Inbox</a></li>
-              <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-tag nav-icon nav-icon fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>Tagged</a></li>
-              <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-circle-exclamation nav-icon"></i>Important</a></li>
-              <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-location-arrow nav-icon fa-rotate-by" style="--fa-rotate-angle: 45deg;"></i></i>Sent Mail</a></li>
-              <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-file nav-icon"></i>Drafts</a></li>
-              <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-trash nav-icon"></i>Trash</a></li>
-            </ul>
-          </div>
  
-          <div class="search ml-4 w-100" role="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input  class="search-bar w-100" type="search" placeholder="Search for emails...">
-          </div>
-        </nav>
-      </header>
+      <div class="row">
+        <header class="header col-sm-12">
+          <nav class="navigation-menu d-flex align-items-center">
+            <button class="nav-btn">
+              <i class="hamburger-menu fa-solid fa-bars fa-2xl"></i>
+            </button>
+
+            <div class="overlay">
+
+            </div> 
+            
+            <div class="mobile-navigation">
+              <header class="navigation-header"> 
+                <i class="fa-regular fa-circle-user avatar-icon"></i>
+
+                <p class="logo-text">LOGO</p>
+              </header>
+              <ul class="navigation-list" aria-hidden="true">
+                <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-inbox nav-icon"></i>Inbox</a></li>
+                <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-tag nav-icon nav-icon fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>Tagged</a></li>
+                <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-circle-exclamation nav-icon"></i>Important</a></li>
+                <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-location-arrow nav-icon fa-rotate-by" style="--fa-rotate-angle: 45deg;"></i></i>Sent Mail</a></li>
+                <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-file nav-icon"></i>Drafts</a></li>
+                <li class="menu-item"><a class="menu-link" href="#"><i class="fa-solid fa-trash nav-icon"></i>Trash</a></li>
+              </ul>
+            </div>
+  
+            <div class="search ml-4 w-100" role="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input  class="search-bar w-100" type="search" placeholder="Search for emails...">
+            </div>
+          </nav>
+        </header>
       
-      <section class="emails d-flex flex-column">
-        <h1 class="mail-box">Primary</h1>
+      </div>
 
-        <ul class="email-list d-flex flex-column">
-          <li class="list-item"> 
-          </li>
+      <div class="row">
+        <section class="emails d-flex flex-column col-sm-12">
+          <h1 class="mail-box">Primary</h1>
 
-          <li class="list-item">
-          </li>
+          <ul class="email-list d-flex flex-column">
+            <li class="list-item"> 
+            </li>
 
-          <li class="list-item"> 
-          </li>
+            <li class="list-item">
+            </li>
 
-          <li class="list-item"> 
-          </li>
+            <li class="list-item"> 
+            </li>
 
-          <li class="list-item"> 
-          </li>
+            <li class="list-item"> 
+            </li>
 
-          <li class="list-item"> 
-          </li>
+            <li class="list-item"> 
+            </li>
 
-          <li class="list-item"> 
-          </li>
+            <li class="list-item"> 
+            </li>
 
-          <li class="list-item"> 
-          </li>
+            <li class="list-item"> 
+            </li>
 
-          <li class="list-item"> 
-          </li>
-        </ul>
+            <li class="list-item"> 
+            </li>
 
-        <button class="compose-btn align-self-end">Compose</button>
-      </section>
+            <li class="list-item"> 
+            </li>
+          </ul>
 
+          <button class="compose-btn align-self-end">Compose</button>
+        </section>
+      </div>
+
+     
       <section class="individual-email">
         <header class="email-header">
           <button class="back-btn">
@@ -123,7 +130,7 @@
   
           <p class="email-content"></p> 
         </section>
-      </section>
+      </section> 
     </main>
     
     <script src="./assets/js/index.js" type="module"></script>
