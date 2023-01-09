@@ -82,7 +82,10 @@ emails.forEach(email => {
  
     individualEmail.style.display = 'block';
 
-    const emailTemplate = `
+    let emailTemplate = "";
+
+    if (window.innerWidth < 1200) {
+      emailTemplate = `
       <h2 class="email-heading">${emailObj.subject}</h2>
 
       <button class="favorite-btn">
@@ -103,8 +106,42 @@ emails.forEach(email => {
           </div>
       </div>
 
-      <p class="email-content">${emailObj.email}</p> 
-    `;
+      <p class="email-content">${emailObj.email}</p> `;
+    } else if (window.innerWidth >= 1200) {
+      emailTemplate = `
+      <div class="email-addresses">
+        <p>To: randomaddress@email.com</p>
+
+        <p class="sender-name">From: ${emailObj.sender.replace(" ", "")}@remail.com</p>
+      </div>
+
+      <div class="sender-content">
+          <div class="sender-info">
+            <i class="fa-regular fa-circle-user sender-icon"></i>
+
+            <h2 class="email-heading">${emailObj.subject}</h2>
+          </div>
+
+          <div class="sender-options"> 
+            <i class="fa-solid fa-trash-can"></i>
+
+            <i class="fa-solid fa-reply reply"></i>
+
+            <i class="fa-solid fa-ellipsis-vertical more-settings"></i>
+          </div>
+      </div>
+
+      <p class="email-content">${emailObj.email}</p>
+      
+      <div class="reply-section">
+        <textarea class="text-area">Text area...</textarea>
+        
+        <i class="fa-solid fa-paperclip fa-rotate-by" style="--fa-rotate-angle: 135deg;"></i>
+        
+        <button class="reply-btn">Send Reply</button>
+      </div>`;
+    }
+    
 
     emailBody.innerHTML = emailTemplate;
   };
