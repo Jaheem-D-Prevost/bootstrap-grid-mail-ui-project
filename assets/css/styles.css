@@ -509,8 +509,8 @@ body {
   }
 
   .col-xl-4 {
-    height: 100vh;
-    overflow: scroll;
+    height: 100vh; 
+    overflow-y: scroll;
   }
 
   .compose-btn {
